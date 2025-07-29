@@ -49,17 +49,37 @@ Knowing your current user is critical in a pentest because your permissions and 
   **Command(s):**
   ```bash
   ls -al ~
+  ```
+**Explanation of the command ls -al ~:**
+  
+The command ls -al ~ is used to list all files and directories, including hidden ones, in your home directory. Here’s a breakdown:
+
+ls — Lists files and directories in the specified location.
+
+-a — Shows all files, including hidden ones (those starting with a dot .), which are often used to store configuration or sensitive data.
+
+-l — Uses the long listing format, displaying detailed information such as permissions, number of links, owner, group, file size, and last modification date.
+
+~ — Refers to the current user’s home directory.
+
+Why is this important in pentesting?
+Reviewing hidden files and detailed permissions helps you quickly spot files or folders that may contain credentials, SSH keys, private configurations, or artifacts from previous attacks. Attackers and defenders alike must master this command to properly enumerate and secure systems.
+
 ![Step 2 Output](evidence/Step2.png)
 
 - Identify the most suspicious hidden file by its name and briefly justify your choice.
+  
   .gnupg
 (Hidden directories like .gnupg may store encryption keys or credentials, which are high-value targets for attackers.
 
 - Show how you would restrict access to that file temporarily by changing its permissions.
+  
   **Command(s):**
 ```bash
 chmod 000 .gnupg
  ```
+
+This command removes all permissions from the .gnupg directory, blocking access for any user, including the owner, until permissions are restored.
  ![Step 3 Output](evidence/Step3.png)
 
 ---
