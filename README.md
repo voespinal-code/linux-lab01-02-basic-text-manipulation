@@ -52,8 +52,15 @@ Knowing your current user is critical in a pentest because your permissions and 
 ![Step 2 Output](evidence/Step2.png)
 
 - Identify the most suspicious hidden file by its name and briefly justify your choice.
-  
+  .gnupg
+(Hidden directories like .gnupg may store encryption keys or credentials, which are high-value targets for attackers.
+
 - Show how you would restrict access to that file temporarily by changing its permissions.
+  **Command(s):**
+```bash
+chmod 000 .gnupg
+ ```
+ ![Step 3 Output](evidence/Step3.png)
 
 ---
 
