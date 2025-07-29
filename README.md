@@ -33,7 +33,7 @@ Read each requirement carefully. Complete every task using the terminal, providi
 whoami
 pwd
  ```
-![Step 1 Output](evidence/step1.png)
+![Step 1 Output](evidence/Step1.png)
 
 - Briefly explain why this information is critical during a pentest.
   
