@@ -56,7 +56,7 @@ The command ls -al ~ is used to list all files and directories, including hidden
 
 ls — Lists files and directories in the specified location.
 
--a — Shows all files, including hidden ones (those starting with a dot .), which are often used to store configuration or sensitive data.
+-a — Shows all files, including hidden ones (those starting with a dot.), which are often used to store configuration or sensitive data.
 
 -l — Uses the long listing format, displaying detailed information such as permissions, number of links, owner, group, file size, and last modification date.
 
@@ -85,12 +85,29 @@ This command removes all permissions from the .gnupg directory, blocking access 
 ---
 
 ## 3. Manual Pages & Advanced Flags
-
+ **The Blue Team asks how you’d recursively list all files in a directory and subdirectories.**
+ 
 - Find out and document how to recursively list all files in a directory and its subdirectories using the `ls` command.
 - Explain how you found the recursive flag, and provide an example command using your home directory.
 - Attach a screenshot of the relevant flag/option as shown in the manual page.
 
----
+#### Solution
+
+**Step 1: Open the manual for ls**
+I opened the manual with `man ls` and searched for "recursive" by typing `/recursive`. This highlighted the flag `-R, --recursive`, which allows listing all subdirectories recursively.
+```bash
+man ls
+```
+ ![Step 3.1 Output](evidence/Step3.1.png)
+ ![Step 3.2 Output](evidence/Step3.2.png)
+
+
+ **Command to list recursively in home:**
+```bash
+ls -lR ~
+```
+ ![Step 3.3 Output](evidence/Step3.3.png)
+
 
 ## 4. Tool Discovery & Location
 
