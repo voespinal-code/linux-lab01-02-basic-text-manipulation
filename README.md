@@ -115,6 +115,23 @@ ls -lR ~
 - Search the entire system for files named “passwd” or “shadow.”
 - Briefly explain what risk is posed to a system if an attacker can access those files.
 
+## Tool discovery: which vs whereis
+
+**which**  
+- Purpose: shows the path of the executable that would run for the current shell environment (searches your `PATH`).  
+- Useful when you want to know *which* executable will be invoked by your shell.  
+- Example:
+
+  ```bash
+    which nmap
+  ```
+  whereis
+
+Purpose: searches for the binary, source and man page files for a program (looks in a broader set of standard locations).
+
+Useful when you want to quickly find the binary and documentation or source.
+
+Example:
 ---
 
 ## 5. Controlled File Handling & Manipulation
