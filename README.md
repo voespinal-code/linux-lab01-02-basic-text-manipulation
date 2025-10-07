@@ -136,6 +136,38 @@ ls -lR ~
 -**Summary:** use which to see the exact executable your shell will run; use whereis to find additional related files (man pages, source, libs).
 
  ![Step 4 Output](evidence/Step4.png)
+
+ ## File search: locate vs find
+
+**locate**
+
+- Uses a pre-built database (mlocate database usually), so searches are very fast.
+- The database must be up-to-date (updatedb), otherwise locate may not show very recent files.
+- Good for quick searches on filenames when freshness is not critical.
+- Example:
+
+```bash
+locate passwd | head
+```
+![Step 4 Output](evidence/Step4.png)
+
+
+
+**find**
+
+- Searches the filesystem in real time (walks directories).
+- Slower on large filesystems but always current and flexible (can match names, times, sizes, owners, run actions). 
+- Can restrict based on permissions, type, mtime, etc.
+- Example:
+
+```bash
+sudo find / -name "passwd" 2>/dev/null
+```
+
+- Summary: use locate for quick filename lookup (fast, needs updated db); use find when you need an accurate, up-to-date search or complex filters.
+
+  ![Step 4 Output](evidence/Step4.png)
+
 ---
 
 ## 5. Controlled File Handling & Manipulation
