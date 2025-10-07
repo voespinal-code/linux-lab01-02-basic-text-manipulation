@@ -133,9 +133,11 @@ ls -lR ~
   ```bash
   whereis phyton3
   ```
--**Summary:** use which to see the exact executable your shell will run; use whereis to find additional related files (man pages, source, libs).
+
 
  ![Step 4 Output](evidence/Step4.png)
+
+ -**Summary:** use which to see the exact executable your shell will run; use whereis to find additional related files (man pages, source, libs).
 
  ## File search: locate vs find
 
@@ -164,10 +166,10 @@ locate passwd | head
 sudo find / -name "passwd" 2>/dev/null
 ```
 
-- Summary: use locate for quick filename lookup (fast, needs updated db); use find when you need an accurate, up-to-date search or complex filters.
-
   ![Step 4 Output](evidence/Step4.2.png)
 
+- **Summary:** use locate for quick filename lookup (fast, needs updated db); use find when you need an accurate, up-to-date search or complex filters.
+  
 ---
 
 ## 5. Controlled File Handling & Manipulation
