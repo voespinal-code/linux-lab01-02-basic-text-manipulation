@@ -125,13 +125,17 @@ ls -lR ~
   ```bash
     which nmap
   ```
-  whereis
+**whereis**
 
-Purpose: searches for the binary, source and man page files for a program (looks in a broader set of standard locations).
+- Purpose: searches for the binary, source and man page files for a program (looks in a broader set of standard locations).
+- Useful when you want to quickly find the binary and documentation or source.
+- Example:
+  ```bash
+  whereis phyton3
+  ```
+-**Summary:** use which to see the exact executable your shell will run; use whereis to find additional related files (man pages, source, libs).
 
-Useful when you want to quickly find the binary and documentation or source.
-
-Example:
+ ![Step 4 Output](evidence/Step4.png)
 ---
 
 ## 5. Controlled File Handling & Manipulation
