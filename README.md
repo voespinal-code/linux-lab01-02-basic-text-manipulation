@@ -149,7 +149,7 @@ ls -lR ~
 ```bash
 locate passwd | head
 ```
-![Step 4 Output](evidence/Step4.png)
+![Step 4 Output](evidence/Step4.1.png)
 
 
 
@@ -166,7 +166,7 @@ sudo find / -name "passwd" 2>/dev/null
 
 - Summary: use locate for quick filename lookup (fast, needs updated db); use find when you need an accurate, up-to-date search or complex filters.
 
-  ![Step 4 Output](evidence/Step4.png)
+  ![Step 4 Output](evidence/Step4.2.png)
 
 ---
 
